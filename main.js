@@ -28,7 +28,7 @@ const logo_head_NA=document.getElementById('head-logo')
 const replacement_image=document.getElementById('replace-logo')
 
 window.addEventListener('scroll',()=>{
-    if(window.scrollY>90){
+    if(window.scrollY>80){
         logo_head_NA.classList.remove('heading-logo-visible')
          logo_head_NA.classList.add('heading-logo-hidden')
 
