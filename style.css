@@ -13,86 +13,88 @@
 
 
 
-header{
-    padding: 54px 35px;
-}
-
 .navi_bar{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
+    padding: 15px;
+    flex-direction: column;
+    width: 100%;
 }
-
-
-h2{
-    font-size: 40px;
-    font-weight: 800;
-    display: flex;
-    align-items: center;
-}
-
-.main-log{
-    max-width: 37px;
-    display: flex;
-}
-
-
 .logo{
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    position: fixed;
-    gap: 20px;
 }
-
-ul, li{
+.logo img{
+    width: 30px;
+    height: auto;
+}
+.logo h1{
+    font-size: 37px;
+}
+.hamburger-menu{
+    background-color: black;
+    color: white;
+    outline: none;
+}
+.mobile_navbar-navlinks{
+    padding: 15px;
+    gap: 5px;
+    height: 0px;
+    padding-top: 1.0rem;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.98);
+    transition: opacity 0.5s, transform 0.5s;
+}
+.mobile_navbar-navlinks-open{
     display: flex;
-    gap: 13px;
-    padding: 4px;
-    border-radius: 10px;
-    align-items: center;
-    background-color: rgb(243, 242, 242);
+    flex-direction: column;
+    height: 100vh;
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
 }
-
-li, a{
-    font-size: 15px;
+.mobile_navbar-navlinks ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1.0rem;
+}
+.arrow-image-navbar{
+    width: 10px;
+    height: 10px;
+}
+.platform-navlink-section{
+    display: flex;
+    align-items: center;
+}
+.mobile_navbar-navlinks li,.mobile_navbar-navlinks a{
     list-style: none;
     text-decoration: none;
     color: black;
+    width: 90%;
 }
-
-
-
-
-
-.btns{
-    position: fixed;
-    right:20px;
+.nav-login_demo-button{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 3.5rem;
 }
-
 .btn-1{
-    width: 70px;
-    padding: 3.5px;
-    border: 1px grey;
-    border-radius: 5px;
-    font-size: 15px;
-    font-weight: 500;
-    cursor:pointer;
-    
+    background-color:white;
+    color: black;
+    order: 2;
 }
 .btn-2{
-    width: 120px;
-    padding: 6px;
-    border: 1px grey;
-    border-radius: 8px;
     background-color: black;
-    color: #fff;
-     font-size: 15px;
-    font-weight: 500;
-    cursor: pointer;
+    color: white;
+    order: 1;
 }
 
 
+.nav_link-lanscape,.btns{
+    display: none;
+}
 .section02{
     padding-left: 95px;
     margin-top: 140px;
@@ -274,6 +276,8 @@ button{
 
 
 
+
+
 .footer-list p:hover{
     background-color: rgb(235, 230, 230); 
     border-radius: 8px;
@@ -290,12 +294,7 @@ input[type="radio"] {
 }
 
 
-@media (min-width:320px) and (max-width:425px){
-
-    header {
-        padding: 30px 5px;
-    }
-
+@media (min-width:320px) and (max-width:799px){
 
 
    .section02 {
@@ -308,12 +307,13 @@ input[type="radio"] {
     }
 
     .left-side{
-        width: 122%;
+        width: 97%;
     }
 
     .double-content{
         display: flex;
         flex-direction: column;
+        flex-wrap: wrap;
     }
 
     .company {
@@ -326,7 +326,7 @@ input[type="radio"] {
         display: flex;
         justify-content: center;
         flex-direction: column;
-        width: 119%;
+        width: 97%;
         padding: 20px;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     }
@@ -359,8 +359,8 @@ input[type="radio"] {
 
     .footer{
         position: relative;
-        margin: 20px;
-        min-width: 110%;
+        margin: 35px 10px 10px 10px;
+        min-width: 95%;
     }
 
     
@@ -372,27 +372,6 @@ input[type="radio"] {
 
 }
 @media (min-width: 768px) and (max-width:1000px){
-    header{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 44px 10px;
-    }
-
-    .li, a {
-        font-size: 12px;
-    }
-
-    .btns {
-        position: fixed;
-        right: 16px;
-    }
-
-    .btn-2{
-        width: 96px;
-        padding: 6px;
-        font-size: 13px;
-    }
 
 
     .section02{
@@ -435,42 +414,95 @@ input[type="radio"] {
         font-size: 10px;
     }
 }
-
-.hamburger-menu{
-    display: none;
-    width: 70px;
-    padding: 3.5px;
-    color: #fff;
-    background-color: black;
-    border-radius: 5px;
-    font-size: 15px;
-    font-weight: 500;
-    cursor: pointer;
+@media (min-width:600px) and (max-width:1000px){
+    .button{
+        width: 20%;
+    }
 }
 
+.footer-list p{
+    font-size: 15px;
+}
 
 
 #radio{
     display: flex;
     flex-direction: column;
 }
+.scroll-lock {
+    overflow: hidden; 
+}
 
-@media screen and (max-width:800px){
-    header{
+
+@media screen and (min-width:1001px){
+    .hamburger-menu,.mobile_navbar-navlinks{
         display: none;
     }
     .navi_bar{
-        display: none;
-    }
-    .mobile-navbar{
         display: flex;
-        justify-content: space-between;
+        gap: 2.0rem;
+        flex-direction: row;
+        justify-content: space-around;
         align-items: center;
+        padding: 2.0rem 3.5rem 2.0rem 3.0rem;
+        position: fixed;
+        top: 0;
+        z-index: 100000;
+        width: 100%;
     }
-    .mobile-nav_link ul{
+    
+    .logo{
+        min-width: 10%;
+    }
+    .nav_link-lanscape{
         display: flex;
-        flex-direction: column;
+        align-items: center;
+        min-width: 70%;
+    }
+    .nav_link-lanscape ul{
+        display: flex;
+        align-items: center;
+        background-color: gainsboro;
+        padding: 5px;
+        border-radius: 5px;
+        gap: 2.0rem;
+
+    }
+    .nav_link-lanscape li,.nav_link-lanscape a{
+        text-decoration: none;
+        list-style: none;
+        color: black;
+    }
+    .btns{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
         gap: 1.0rem;
-      
+        justify-content: flex-end;
+    }
+    .btn-1{
+        order: 1;
+        align-self: flex-end;
+    }
+    .btn-2{
+        order: 2;
+       width: 100px;
+       align-self: flex-end;
     }
 }
+
+.heading-logo-hidden{
+        display: none;
+  }
+    .heading-logo-visible{
+        display: inline;
+}
+
+.replace-logo-hidden{
+    display: none;
+}
+.replace-logo-visible{
+    display: inline;
+    
+}
+

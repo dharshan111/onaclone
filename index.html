@@ -10,43 +10,53 @@
 
 </head>
 <body>
-    <header>
-        <div class="navi_bar">
-            <div class="logo">
-               <h2><span><img src="assets/logo.png" alt="" class="main-log"></span>NA</h2>
-                <div class="nav_link">
+    <header class="navi_bar">
+            <div class="logo" id="logos">
+                <img class="replace-logo-hidden" id="replace-logo" src="assets\logo.png" alt="logo image">
+               <h1 id="head-logo" class="heading-logo-visible"><span><img src="assets/logo.png" alt="ona o logo image" class="main-log"></span>NA</h1>
+               <button id="menu-button" class="hamburger-menu">Menu</button>
+               </div>
+                <div class="nav_link-lanscape">
                     <ul>
-                        <li><a href="#platform">Platform </a></li>
-                        <li><a href="#resources">Resources</a></li>
+                        <div class="platform-navlink-section">
+                     <li><a href="#platform">Platform </a></li><img src="down-arrow.png" alt="arrow button" class="arrow-image-navbar">
+                     </div>
+                     <div class="platform-navlink-section">
+                    <li><a href="#resources">Resources</a></li><img src="down-arrow.png" alt="arrow button" class="arrow-image-navbar">
+                    </div>
                         <li><a href="#enterprise">Enterprise</a></li>
                         <li><a href="#blogs">Blogs</a></li>
                         <li><a href="#docs">Docs</a></li>
                         <li><a href="#pricing">Pricing</a></li>
                     </ul>
                 </div>
-            </div>
-            <div class="btns">
+            
+            <div class="btns">    
                 <button class="btn-1">Login</button>
                 <button class="btn-2">Get a demo</button>
             </div>
-        </div>
     </header>
-    <nav class="mobile-navbar">
-        <h2><span><img src="assets/logo.png" alt="" class="main-log"></span>NA</h2>
-                <div class="mobile-nav_link">
-                    <ul>
-                        <li><a href="#platform">Platform </a></li>
-                        <li><a href="#resources">Resources</a></li>
-                        <li><a href="#enterprise">Enterprise</a></li>
-                        <li><a href="#blogs">Blogs</a></li>
-                        <li><a href="#docs">Docs</a></li>
-                        <li><a href="#pricing">Pricing</a></li>
-                    </ul>
+
+    <nav class="mobile_navbar-navlinks" id="mobile-navbar-links">
+        <ul>    
+            <div class="platform-navlink-section">
+                <li><a href="#platform">Platform </a></li><img src="assets\play.png" alt="arrow button" class="arrow-image-navbar">
                 </div>
-        <button class="hamburger-menu" >Menu</button> 
+                <div class="platform-navlink-section">
+                <li><a href="#resources">Resources</a></li><img src="assets\play.png" alt="arrow button" class="arrow-image-navbar">
+                </div>
+                <li><a href="#enterprise">Enterprise</a></li>
+                <li><a href="#blogs">Blogs</a></li>
+                <li><a href="#docs">Docs</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+        </ul>
+        <div class="nav-login_demo-button">
+            <button class="btn-1">Login</button>
+                <button class="btn-2">Get a demo</button>
+                </div>
     </nav>
 
-    <section class="section02 gridsection02">
+    <section id="four-form" class="section02 gridsection02">
         <p class="heading">See Ona in action</p>
 
 
@@ -83,7 +93,7 @@
 
             <label for="text">Total number of engineers*</label>
             <select name="number" id="dropdown-inp">
-                <option></option>
+                <option value="" disabled selected hidden>select...</option>
                 <option value="1-10">1-10</option>
                 <option value="11-50">11-50</option>
                 <option value="51-100">51-100</option>
@@ -112,7 +122,7 @@
     </section>
     
 
-    <footer class="footer gridfooter">
+    <footer class="footer gridfooter" id="footer-section">
         <div class="lists">
             <div class="logo-footer">
                  <img src="assets/logo.png" alt="" class="footerlogo">
