@@ -26,6 +26,7 @@ menu.addEventListener('click',()=>{
 
 const logo_head_NA=document.getElementById('head-logo')
 const replacement_image=document.getElementById('replace-logo')
+const navlists_transform=document.getElementById('port-nav')
 
 window.addEventListener('scroll',()=>{
     if(window.scrollY>80){
@@ -35,6 +36,10 @@ window.addEventListener('scroll',()=>{
          //replace logo
          replacement_image.classList.add('replace-logo-visible')
          replacement_image.classList.remove('replace-logo-hidden')
+
+         //navlists transition
+        navlists_transform.classList.add('unorder')
+        navlists_transform.classList.remove()
     }
     else{
         logo_head_NA.classList.remove('heading-logo-hidden')
@@ -43,8 +48,15 @@ window.addEventListener('scroll',()=>{
         //replace logo
         replacement_image.classList.add('replace-logo-hidden')
         replacement_image.classList.remove('replace-logo-visible')
+
+        //navlists transition
+        navlists_transform.classList.remove('unorder')
     }
 })
+
+
+
+
 
 
 function validation(event){
@@ -78,8 +90,7 @@ function emailValidation() {
 
     else{
         emailError.textContent = '';
-        document.getElementById('email-inp').style.border = '1px solid green'
-        console.log(`Email: ${email}`);        
+        document.getElementById('email-inp').style.border = '1px solid green'       
     }
     return valid
 }
@@ -117,10 +128,11 @@ function engineerValidation(){
     const engineerError = document.getElementById('error-drop');
     valid = true;
 
-    if(engineer === ''){
+    if(engineer.value === ''){
         engineerError.textContent = 'This field is required';
         document.getElementById('dropdown-inp').style.border = '1px solid red';
     }else{
+        engineerError.textContent = '';
         document.getElementById('dropdown-inp').style.border = '1px solid green';
     }
     return valid
@@ -157,7 +169,7 @@ document.getElementById('dropdown-inp').addEventListener('input', engineerValida
 document.getElementById('dropdown-inp').addEventListener('input', selectValidation)
 
 const select = document.getElementsByClassName('select')
-select.forEach(r => {
-    r.addEventListener('change', selectValidation)
+select.forEach(ratio => {
+    ratio.addEventListener('change', selectValidation)
 });
 

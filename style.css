@@ -25,7 +25,9 @@
     align-items: center;
 }
 .logo img{
-    width: 30px;
+    width: 32px;
+    position: relative;
+    top: 3px;
     height: auto;
 }
 .logo h1{
@@ -40,7 +42,7 @@
     padding: 15px;
     gap: 5px;
     height: 0px;
-    padding-top: 1.0rem;
+    padding-top: 16px;
     opacity: 0;
     pointer-events: none;
     transform: scale(0.98);
@@ -53,12 +55,13 @@
     opacity: 1;
     pointer-events: auto;
     transform: scale(1);
+    transform: translateX(0);
 }
 .mobile_navbar-navlinks ul{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    gap: 1.0rem;
+    gap: 16px;
 }
 .arrow-image-navbar{
     width: 10px;
@@ -66,6 +69,7 @@
 }
 .platform-navlink-section{
     display: flex;
+    gap: 5px;
     align-items: center;
 }
 .mobile_navbar-navlinks li,.mobile_navbar-navlinks a{
@@ -78,7 +82,7 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding-top: 3.5rem;
+    padding-top: 56px;
 }
 .btn-1{
     background-color:white;
@@ -370,6 +374,13 @@ input[type="radio"] {
         width: 40%;
     }
 
+    #radio {
+        display: flex;
+        gap: 5px;
+        flex-direction: column;
+        font-size: 14px;
+    }
+
 }
 @media (min-width: 768px) and (max-width:1000px){
 
@@ -440,11 +451,11 @@ input[type="radio"] {
     }
     .navi_bar{
         display: flex;
-        gap: 2.0rem;
+        gap:1px;
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
-        padding: 2.0rem 3.5rem 2.0rem 3.0rem;
+        padding: 32px 56px 32px 48px;
         position: fixed;
         top: 0;
         z-index: 100000;
@@ -462,10 +473,11 @@ input[type="radio"] {
     .nav_link-lanscape ul{
         display: flex;
         align-items: center;
-        background-color: gainsboro;
+        background-color: #f3f1f1;
         padding: 5px;
         border-radius: 5px;
-        gap: 2.0rem;
+        gap: 32px;
+        transition: all 0.3s ease;
 
     }
     .nav_link-lanscape li,.nav_link-lanscape a{
@@ -477,7 +489,7 @@ input[type="radio"] {
         display: flex;
         flex-direction: row;
         align-items: center;
-        gap: 1.0rem;
+        gap: 16px;
         justify-content: flex-end;
     }
     .btn-1{
@@ -486,23 +498,27 @@ input[type="radio"] {
     }
     .btn-2{
         order: 2;
-       width: 100px;
-       align-self: flex-end;
+        width: 100px;
+        align-self: flex-end;
+    }
+    .unorder{
+        position: relative;
+        right: 0;
     }
 }
 
-.heading-logo-hidden{
-        display: none;
-  }
+    .heading-logo-hidden{
+            display: none;
+    }
     .heading-logo-visible{
         display: inline;
-}
+    }
 
-.replace-logo-hidden{
-    display: none;
-}
-.replace-logo-visible{
-    display: inline;
-    
-}
+    .replace-logo-hidden{
+        display: none;
+    }
+    .replace-logo-visible{
+        display: inline;
+        
+    }
 
