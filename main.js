@@ -168,8 +168,10 @@ document.getElementById('company-inp').addEventListener('input', companyValidati
 document.getElementById('dropdown-inp').addEventListener('input', engineerValidation)
 document.getElementById('dropdown-inp').addEventListener('input', selectValidation)
 
-const select = document.getElementsByClassName('select')
-select.forEach(ratio => {
-    ratio.addEventListener('change', selectValidation)
+const radios = document.querySelectorAll('.select');
+radios.forEach(radio => {
+  radio.addEventListener('change', () => {
+    document.getElementById('error-select').textContent = '';
+  });
 });
 
