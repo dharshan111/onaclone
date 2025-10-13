@@ -265,6 +265,7 @@ button{
     display: flex;
     gap: 20px;
     justify-content: flex-end;
+    align-items: center;
     margin-top: 150px;
 }
 
@@ -297,6 +298,8 @@ input[type="radio"] {
     font-size: 10px;
     color: red;
 }
+
+
 
 
 
