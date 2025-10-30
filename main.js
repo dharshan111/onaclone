@@ -57,6 +57,23 @@ window.addEventListener('scroll',()=>{
 
 
 
+window.addEventListener("scroll", () => {
+  const unorder = document.querySelector(".unorder");
+
+  if (window.scrollY > 80) {
+    unorder.classList.add("unorder-move-left");
+  } else {
+    unorder.classList.remove("unorder-move-left");
+  }
+});
+
+
+
+
+
+
+
+
 
 
 function validation(event){
